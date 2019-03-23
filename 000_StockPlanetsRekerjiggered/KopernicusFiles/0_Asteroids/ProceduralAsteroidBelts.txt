@@ -1,0 +1,166 @@
+@Kopernicus:FOR[000_StockPlanetsRekerjiggered]
+{
+	!Asteroid[Stock]{}
+	//with the addition of the B612 Sentinel Telescope, you don't need a dedicated Near-Kerbin belt--go and launch the telescope if you want some classic ARM action.
+	
+	
+	Asteroid
+	{
+		name = Main Belt
+		interval = 15
+		minUntrackedLifetime = 1
+		maxUntrackedLifetime = 20
+		probability = 100
+		spawnGroupMinLimit = 2
+		spawnGroupMaxLimit = 10
+		Size
+		{
+			key = 0   0
+			key = 0.3 0.45
+			key = 0.7 0.55
+			key = 1   1
+		}
+		Locations
+		{
+			Around
+			{
+				Body 
+				{
+					body = Sun
+					probability = 100
+					reached = false
+					semiMajorAxis
+					{
+						minValue = 2.12 // AU
+						@minValue *= 13599840256
+						maxValue = 3.18 // AU
+						@maxValue *= 13599840256
+					}
+					inclination
+					{
+						minValue = -20
+						maxValue = 20
+					}
+					eccentricity
+					{
+						minValue = 0
+						maxValue = 0.2
+					}
+					meanAnomalyAtEpoch
+					{
+						minValue = -3.14159265358979
+						maxValue = 3.14159265358979
+					}
+					longitudeOfAscendingNode
+					{
+						minValue = 0
+						maxValue = 360
+					}
+					argumentOfPeriapsis
+					{
+						minValue = -90
+						maxValue = 270
+					}
+				}
+			}
+		}
+	}
+	
+	Asteroid
+	{
+		name = Jool Trojans
+		interval = 15
+        minUntrackedLifetime = 1
+        maxUntrackedLifetime = 20
+        probability = 15
+        spawnGroupMinLimit = 3
+        spawnGroupMaxLimit = 8
+        Size
+        {
+            key = 0   0
+            key = 0.3 0.45
+            key = 0.7 0.55
+            key = 1   1
+        }
+		Locations
+		{
+			Around
+			{
+				Body
+				{
+					name = JoolTrojans
+					body = Sun
+					probability = 100
+					reached = true
+					semiMajorAxis
+					{
+						minValue = 68773560320
+						maxValue = 68773560320
+					}
+					inclination
+					{
+						minValue = -15
+						maxValue = 15
+					}
+					argumentOfPeriapsis
+					{
+						minValue = 0
+						maxValue = 0
+					}
+					eccentricity
+					{
+						minValue = 0
+						maxValue = 0.35
+					}
+					longitudeOfAscendingNode
+					{
+						minValue = 52
+						maxValue = 52
+					}
+					meanAnomalyAtEpoch
+					{
+						minValue = -0.947197552
+						maxValue = -0.947197552
+					}
+				}
+				Body
+				{
+					name = JoolGreeks
+					body = Sun
+					probability = 100
+					reached = false
+					semiMajorAxis
+					{
+						minValue = 68773560320
+						maxValue = 68773560320
+					}
+					inclination
+					{
+						minValue = -15
+						maxValue = 15
+					}
+					argumentOfPeriapsis
+					{
+						minValue = 0
+						maxValue = 0
+					}
+					eccentricity
+					{
+						minValue = 0
+						maxValue = 0.35
+					}
+					longitudeOfAscendingNode
+					{
+						minValue = 52
+						maxValue = 52
+					}
+					meanAnomalyAtEpoch
+					{
+						minValue = 1.14719755
+						maxValue = 1.14719755
+					}
+				}
+			}
+		}
+	}
+}
